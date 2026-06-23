@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Mood Tracker PRO</title>
+  </head>
+  <body>
+    <main class="mood-shell">
+      <section class="mood-hero">
+        <p class="hero-label">Mood Tracker PRO</p>
+        <h1>Track your daily mood</h1>
+        <p>
+          Log how you feel, add short notes and build a visual history of your
+          emotional patterns.
+        </p>
+      </section>
+
+      <section class="stats-grid">
+        <article class="stat-card">
+          <span id="totalEntries">0</span>
+          <p>Total Entries</p>
+        </article>
+
+        <article class="stat-card">
+          <span id="happyCount">0</span>
+          <p>Happy</p>
+        </article>
+
+        <article class="stat-card">
+          <span id="calmCount">0</span>
+          <p>Calm</p>
+        </article>
+
+        <article class="stat-card">
+          <span id="stressedCount">0</span>
+          <p>Stressed</p>
+        </article>
+      </section>
+
+      <section class="tracker-layout">
+        <aside class="entry-panel">
+          <h2>Add Mood</h2>
+
+          <form id="moodForm">
+            <div class="field-group">
+              <label for="moodInput">Mood</label>
+              <select id="moodInput">
+                <option value="happy">Happy</option>
+                <option value="calm">Calm</option>
+                <option value="tired">Tired</option>
+                <option value="stressed">Stressed</option>
+                <option value="sad">Sad</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="noteInput">Note</label>
+              <textarea
+                id="noteInput"
+                placeholder="Example: Great gym session today..."
+              ></textarea>
+            </div>
+
+            <button type="submit">Add Mood Entry</button>
+          </form>
+        </aside>
+
+        <section class="mood-area">
+          <div class="tools-card">
+            <input type="text" id="searchInput" placeholder="Search notes..." />
+
+            <div class="filter-list">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="happy">Happy</button>
+              <button class="filter-btn" data-filter="calm">Calm</button>
+              <button class="filter-btn" data-filter="tired">Tired</button>
+              <button class="filter-btn" data-filter="stressed">
+                Stressed
+              </button>
+              <button class="filter-btn" data-filter="sad">Sad</button>
+            </div>
+          </div>
+
+          <div id="moodGrid" class="mood-grid">
+            <!-- Mood cards will be rendered here -->
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
