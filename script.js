@@ -38,8 +38,10 @@ function saveMoods() {
 function loadMoods() {
   const storedMoods = localStorage.getItem("moodTracker");
 
-  if (moods) {
+  if (storedMoods) {
     moods = JSON.parse(storedMoods);
+  } else {
+    moods = [];
   }
 }
 
