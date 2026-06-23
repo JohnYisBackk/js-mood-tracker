@@ -22,7 +22,7 @@ Track your emotions, save your daily mood, and monitor your emotional history th
 
 ## 🔗 Live Demo
 
-👉 
+👉 https://johnyisbackk.github.io/js-mood-tracker/
 
 ---
 
